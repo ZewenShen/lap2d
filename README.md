@@ -13,7 +13,7 @@ By classical potential theory, Laplace's equation can be reformulated as Fredhol
 * **Near-boundary potential evaluation**: The function lapfparam_adap allows one to evaluate the near-boundary potential accurately through Legendre expansion and adaptive Gaussian quadrature after the density of charges/dipoles is solved.
 
 ## Caveats
-* lap2d currently only supports interior Dirichlet problems, although the boundary integral equation is good for both interior and exterior, Dirichlet and Neumann problems.
+* lap2d currently only supports interior Dirichlet problems, although the boundary integral equation will work for both interior/exterior and Dirichlet/Neumann problems.
 * The number of panels in the discretization must be a power of 2. (But one is allowed to adjust the number of Gauss-Legendre nodes on each panel.)
 * lap2d depends on NumericalToolbox written by [Serkh](http://www.math.toronto.edu/~kserkh/) et al. The link to the library will be updated here after publication.
 
