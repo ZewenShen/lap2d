@@ -21,6 +21,8 @@ By classical potential theory, Laplace's equation can be reformulated as Fredhol
 I would like to thank my advisor, Professor [Kirill Serkh](http://www.math.toronto.edu/~kserkh/), for both his huge amount of effort devoted and his seemingly infinite amount of patience, support and guidance. I'm also grateful for the opportunity to work on this fun project.
 
 ## Reference
-J. Levandosky, Notes for potential theory, https://web.stanford.edu/class/math220b/handouts/potential.pdf.
+P.G. Martinsson, [Boundary Integral Equations and the Nyström method](https://amath.colorado.edu/faculty/martinss/2014_CBMS/Lectures/lecture08.pdf).
 
-A. Gillman, P. Young, and P.G. Martinsson, A direct solver with O(N) complexity for integral equations on one-dimensional domains, Front. Math. China, 7 (2012), pp. 217–247.
+J. Levandosky, [Notes for potential theory](https://web.stanford.edu/class/math220b/handouts/potential.pdf).
+
+A. Gillman, P. Young, and P.G. Martinsson, [A direct solver with O(N) complexity for integral equations on one-dimensional domains](https://arxiv.org/pdf/1105.5372.pdf), Front. Math. China, 7 (2012), pp. 217–247.
