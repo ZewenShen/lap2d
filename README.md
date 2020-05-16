@@ -9,13 +9,14 @@ By classical potential theory, Laplace's equation can be reformulated as Fredhol
 * **Direct solver**: Useful for problems involving multiple right-hand sides. Allow for rapid and accurate solutions to relatively ill-conditioned problems.
 * **Spectral convergence**: One can prove that the rate of convergence is determined by the order of quadrature rule used when solving the integral equation. By default, the composite 12-point Gauss-Legendre quadrature rule is used.
 * **Reduction of dimensionality**: Reduce the problem domain from a two-dimensional one to its boundary (one-dimensional).
-* **O(n) time complexity**: Besides low asymptotic cost, the constant of the time complexity is also small.
+* **Fast**: Besides low asymptotic cost, the constant of the time complexity is also small.
 * **Near-boundary potential evaluation**: The function lapfparam_adap allows one to evaluate the near-boundary potential accurately through Legendre expansion and adaptive Gaussian quadrature after the density of charges/dipoles is solved.
 
 ## Caveats
 * lap2d currently only supports interior Dirichlet problems, although the boundary integral equation will work for both interior/exterior and Dirichlet/Neumann problems.
 * The number of panels in the discretization must be a power of 2. (But one is allowed to adjust the number of Gauss-Legendre nodes on each panel.)
 * lap2d depends on NumericalToolbox written by [Serkh](http://www.math.toronto.edu/~kserkh/) et al. The link to the library will be updated here after publication.
+* lap2d uses a binary tree instead of a quadtree to hierarchically partition the boundary, which causes the theoretical asymptotic time complexity to be O(nlogn). However, it turns out that the coefficient of the nlogn term is tiny and for any reasonable size of discretization, the solver exhibits O(n) asymptotic time complexity.
 
 ## Acknowledgements
 I would like to thank my advisor, Professor [Kirill Serkh](http://www.math.toronto.edu/~kserkh/), for both his huge amount of effort devoted and his seemingly infinite amount of patience, support and guidance. I'm also grateful for the opportunity to work on this fun project.
@@ -24,6 +25,8 @@ I would like to thank my advisor, Professor [Kirill Serkh](http://www.math.toron
 P.G. Martinsson, [Boundary Integral Equations and the Nyström method](https://amath.colorado.edu/faculty/martinss/2014_CBMS/Lectures/lecture08.pdf), CBMS/NSF Conference on Fast Direct Solvers, 2014.
 
 A. Gillman, P. Young, and P.G. Martinsson, [A direct solver with O(N) complexity for integral equations on one-dimensional domains](https://arxiv.org/pdf/1105.5372.pdf), Front. Math. China, 7 (2012), pp. 217–247.
+
+P.G. Martinsson, [Direct Solvers for Integral Equations](https://amath.colorado.edu/faculty/martinss/2014_CBMS/Lectures/lecture09.pdf), CBMS/NSF Conference on Fast Direct Solvers, 2014.
 
 J. Levandosky, [Notes on potential theory](https://web.stanford.edu/class/math220b/handouts/potential.pdf), Stanford University, 2003.
 
