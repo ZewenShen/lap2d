@@ -10,7 +10,7 @@ By classical potential theory, Laplace's equation can be reformulated as Fredhol
 * **Spectral convergence**: One can prove that the rate of convergence is determined by the order of quadrature rule used when solving the integral equation. By default, the composite 12-point Gauss-Legendre quadrature rule is used.
 * **Reduction of dimensionality**: Reduce the problem domain from a two-dimensional one to its boundary (one-dimensional).
 * **Fast**: Besides low asymptotic cost, the constant of the time complexity is also small.
-* **Near-boundary potential evaluation**: The function lapfparam_adap allows one to evaluate near-boundary potential accurately through Legendre expansion and adaptive Gaussian quadrature given the density of charges/dipoles on the boundary.
+* **Accurate evaluation of near-boundary potential**: The function lapfparam_adap allows one to evaluate near-boundary potential accurately through Legendre expansion and adaptive Gaussian quadrature given the density of charges/dipoles on the boundary.
 
 ## Caveats
 * lap2d currently only supports interior Dirichlet problems, although the boundary integral equation will work for both interior/exterior and Dirichlet/Neumann problems.
